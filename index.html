@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Wordle APP/CSS/wordlecss.css" />
+    <script src="Wordle APP/JavaScript/wordle.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle</title>
+    <link rel="stylesheet" type="text/css" href="Wordle APP/CSS/keyboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        <form action="/url" method="GET">
+            <input id="write" autocomplete="off" type="text" rows="1" cols="5"></input>
+            <button type="button" id="guess-button" onclick="checkWord()">
+                Guess
+            </button>
+        </form>
+    </div>
+    <div class="previous-sub">
+        <div class="grid-container">
+            <div class="grid-item" id="1"></div>
+            <div class="grid-item" id="2"></div>
+            <div class="grid-item" id="3"></div>
+            <div class="grid-item" id="4"></div>
+            <div class="grid-item" id="5"></div>
+            <div class="grid-item" id="6"></div>
+            <div class="grid-item" id="7"></div>
+            <div class="grid-item" id="8"></div>
+            <div class="grid-item" id="9"></div>
+            <div class="grid-item" id="10"></div>
+            <div class="grid-item" id="11"></div>
+            <div class="grid-item" id="12"></div>
+            <div class="grid-item" id="13"></div>
+            <div class="grid-item" id="14"></div>
+            <div class="grid-item" id="15"></div>
+            <div class="grid-item" id="16"></div>
+            <div class="grid-item" id="17"></div>
+            <div class="grid-item" id="18"></div>
+            <div class="grid-item" id="19"></div>
+            <div class="grid-item" id="20"></div>
+            <div class="grid-item" id="21"></div>
+            <div class="grid-item" id="22"></div>
+            <div class="grid-item" id="23"></div>
+            <div class="grid-item" id="24"></div>
+            <div class="grid-item" id="25"></div>
+            <div class="grid-item" id="26"></div>
+            <div class="grid-item" id="27"></div>
+            <div class="grid-item" id="28"></div>
+            <div class="grid-item" id="29"></div>
+            <div class="grid-item" id="30"></div>
+        </div>
+    </div>
+    <div id="keyboard-cont">
+        <div class="first-row">
+            <button class="letter" id="q">q</button>
+            <button class="letter" id="w">w</button>
+            <button class="letter" id="e">e</button>
+            <button class="letter" id="r">r</button>
+            <button class="letter" id="t">t</button>
+            <button class="letter" id="y">y</button>
+            <button class="letter" id="u">u</button>
+            <button class="letter" id="i">i</button>
+            <button class="letter" id="o">o</button>
+            <button class="letter" id="p">p</button>
+        </div>
+        <div class="second-row">
+            <button class="letter" id="a">a</button>
+            <button class="letter" id="s">s</button>
+            <button class="letter" id="d">d</button>
+            <button class="letter" id="f">f</button>
+            <button class="letter" id="g">g</button>
+            <button class="letter" id="h">h</button>
+            <button class="letter" id="j">j</button>
+            <button class="letter" id="k">k</button>
+            <button class="letter" id="l">l</button>
+        </div>
+        <div class="third-row">
+            <button class="letter delete" id="delete">⌫</button>
+            <button class="letter" id="z">z</button>
+            <button class="letter" id="x">x</button>
+            <button class="letter" id="c">c</button>
+            <button class="letter" id="v">v</button>
+            <button class="letter" id="b">b</button>
+            <button class="letter" id="n">n</button>
+            <button class="letter" id="m">m</button>
+            <button class="letter enter" id="enter" onclick="checkWord()">
+                Enter
+            </button>
+        </div>
+    </div>
+    <!-- <div id="container">
+        <ul id="keyboard" class="keyboard-center">
+            <li class="letter" id="q">Q</li>
+            <li class="letter" id="w">W</li>
+            <li class="letter" id="e">E</li>
+            <li class="letter" id="r">R</li>
+            <li class="letter" id="t">T</li>
+            <li class="letter" id="y">Y</li>
+            <li class="letter" id="u">U</li>
+            <li class="letter" id="i">I</li>
+            <li class="letter" id="o">O</li>
+            <li class="letter" id="p">P</li>
+            <li class="letter" id="a">A</li>
+            <li class="letter" id="s">S</li>
+            <li class="letter" id="d">D</li>
+            <li class="letter" id="f">F</li>
+            <li class="letter" id="g">G</li>
+            <li class="letter" id="h">H</li>
+            <li class="letter" id="j">J</li>
+            <li class="letter" id="k">K</li>
+            <li class="letter" id="l">L</li>
+            <li class="delete lastitem">DELETE</li>
+            <li class="letter" id="z">Z</li>
+            <li class="letter" id="x">X</li>
+            <li class="letter" id="c">C</li>
+            <li class="letter" id="v">V</li>
+            <li class="letter" id="b">B</li>
+            <li class="letter" id="n">N</li>
+            <li class="letter" id="m">M</li>
+            <li class="return lastitem">ENTER</li>
+        </ul>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Wordle APP/JavaScript/keyboard.js"></script>
+
+    <div class="credit">Made with <i class="fa fa-heart" style="font-size:20px;color:red"></i> by Saket Sanadhya
+        <a href="https://www.linkedin.com/in/saket-sanadhya-91793a217/"> <i class="fa fa-linkedin"
+                style="color: #0077b5;font-size: 20px;"></i>
+        </a>
+    </div>
+</body>
+
+</html>
