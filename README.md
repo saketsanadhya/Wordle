@@ -1,7 +1,7 @@
 # **Wordle APP**
 
 - A 5 letter word guessing website very similar to popular Wordle APP based on HTML, CSS and Javascript.
-- Link to the Wordle website: 
+- Link to the Wordle website: https://dreamy-stardust-6ac519.netlify.app
   
 
 # Game Rules
